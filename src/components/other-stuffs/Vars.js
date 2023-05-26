@@ -500,11 +500,9 @@ class Vars {
     };
     this.url_username_saveid = (name, saveDataId) => {
       if (!name && !saveDataId) {
-        return `?userName=${this.getUserInLocal().name}?saveDataId=${
-          this.getUserInLocal().current_saveDataId
-        }`;
+        return `?saveDataId=${this.getUserInLocal().current_saveDataId}`;
       }
-      return `?userName=${name}?saveDataId=${saveDataId}`;
+      return `?saveDataId=${saveDataId}`;
     };
     this.url_username = (name) => {
       if (name) {

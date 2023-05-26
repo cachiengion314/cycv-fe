@@ -13,6 +13,7 @@ const MyCvPage = ({ dispatch }) => {
   const [needLoading, setNeedLoading] = React.useState(true);
   const route = useRoute();
   const saveDataIdQuery = route.querySaveDataId;
+  console.log(`saveDataIdQuery`, saveDataIdQuery);
 
   React.useEffect(() => {
     const controlStatus = async () => {
@@ -60,6 +61,7 @@ const MyCvPage = ({ dispatch }) => {
           setNeedLoading(false);
           return;
         }
+
         setNeedLoading(false);
         return;
       }
