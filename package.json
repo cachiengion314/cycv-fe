@@ -1,8 +1,8 @@
 {
-  "name": "frontend",
+  "name": "frontend-cycv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cachiengion314.github.io/amplify-react-app/",
+  "homepage": "https://cachiengion314.github.io/cycv-fe/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.6",
