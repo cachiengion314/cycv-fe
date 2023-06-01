@@ -51,7 +51,7 @@ const SignUp = ({ width, isModalShow, socket, dispatch, className }) => {
           Vars.socket_listenCommentedNotify(dispatch, socket);
           Vars.showNotify(dispatch, `Created account ${rawData.messenger}`);
           // redirect route
-          route.push("/cycv-fe" + Vars.url_username());
+          route.push("/");
           return;
         }
         Vars.showNotify(dispatch, `Some thing went wrong!`);

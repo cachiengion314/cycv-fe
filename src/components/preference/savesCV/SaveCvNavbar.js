@@ -189,7 +189,7 @@ const SaveCvNavbar = ({
                 _id
               );
               // redirect route
-              route.push("/cycv-fe" + Vars.url_username_saveid(name, _id));
+              route.push("/" + Vars.url_username_saveid(name, _id));
               return;
             }
             Vars.showNotify(dispatch, `Something went wrong!`, Vars.sadImg);
@@ -283,7 +283,7 @@ const SaveCvNavbar = ({
       `Are you sure want to make a new file? All of your unsaved works will be lost!`,
       () => {
         Vars.clearHomepage(dispatch);
-        route.push("/cycv-fe" + Vars.url_username(name));
+        route.push("/" + Vars.url_username(name));
       }
     );
   };

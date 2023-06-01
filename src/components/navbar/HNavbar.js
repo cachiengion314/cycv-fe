@@ -116,7 +116,7 @@ const HNavbar = ({
   };
 
   const handleShowCaseClick = () => {
-    route.push("/cycv-fe/show-case");
+    route.push("/show-case");
   };
 
   return (

@@ -35,7 +35,7 @@ const UserCvThumpnail = ({
   const route = useRoute();
 
   const handleThumnailClick = (e) => {
-    route.push("/cycv-fe" + Vars.url_username_saveid("public-cv", saveDataId));
+    route.push("/" + Vars.url_username_saveid("public-cv", saveDataId));
   };
 
   return (

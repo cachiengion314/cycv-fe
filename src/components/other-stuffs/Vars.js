@@ -483,7 +483,7 @@ class Vars {
     // api section //
     //////////////////
     this.redirectToHomePage = () => {
-      window.location.replace("/cycv-fe");
+      window.location.replace(`/`);
     };
     this.fetchApi = async (url, option = { method: "GET" }) => {
       try {

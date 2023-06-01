@@ -120,7 +120,7 @@ const SavesDataArea = ({
       Vars.closeModal(dispatch);
       // redirect route
       // route.push(`${userId}?saveDataId=${this_saveDataId}`)
-      route.push("/cycv-fe" + Vars.url_username_saveid(name, this_saveDataId));
+      route.push("/" + Vars.url_username_saveid(name, this_saveDataId));
     });
   };
 

@@ -26,7 +26,7 @@ const MyCvPage = ({ dispatch }) => {
           if (!isSuccess) {
             Vars.signIn(dispatch);
             Vars.socket_listenCommentedNotify(dispatch, socket);
-            route.push("/cycv-fe" + Vars.url_username_saveid());
+            route.push("/" + Vars.url_username_saveid());
             setNeedLoading(false);
             return;
           }
@@ -39,14 +39,14 @@ const MyCvPage = ({ dispatch }) => {
         if (Vars.isUserHaveCurrentSaveDataId()) {
           Vars.signIn(dispatch);
           Vars.socket_listenCommentedNotify(dispatch, socket);
-          route.push("/cycv-fe" + Vars.url_username_saveid());
+          route.push("/" + Vars.url_username_saveid());
           setNeedLoading(false);
           return;
         }
 
         Vars.signIn(dispatch);
         Vars.socket_listenCommentedNotify(dispatch, socket);
-        route.push("/cycv-fe" + Vars.url_username());
+        route.push("/");
         setNeedLoading(false);
         return;
       }
@@ -57,7 +57,7 @@ const MyCvPage = ({ dispatch }) => {
           saveDataIdQuery
         );
         if (!isSuccess) {
-          route.push("/cycv-fe");
+          route.push("/");
           setNeedLoading(false);
           return;
         }
@@ -66,7 +66,7 @@ const MyCvPage = ({ dispatch }) => {
         return;
       }
 
-      route.push("/cycv-fe");
+      route.push("/");
       setNeedLoading(false);
     };
 

@@ -54,7 +54,7 @@ const SignIn = ({ width, isModalShow, socket, dispatch, className }) => {
           // redirect route
           if (Vars.getUserInLocal().current_saveDataId) {
             route.push(
-              "/cycv-fe" +
+              "/" +
                 Vars.url_username_saveid(
                   name,
                   Vars.Vars.getUserInLocal().current_saveDataId
@@ -62,7 +62,7 @@ const SignIn = ({ width, isModalShow, socket, dispatch, className }) => {
             );
             return;
           }
-          route.push("/cycv-fe" + Vars.url_username(name));
+          route.push("/");
           return;
         }
         Vars.closeModal(dispatch);

@@ -27,16 +27,12 @@ function App() {
         </Block>
 
         <Switch>
-          {/* <Route exact path="/cycv-fe" children={<MyCvPage dispatch={store.dispatch} />} /> */}
           <Route
             exact
-            path="/cycv-fe/show-case"
+            path="/show-case"
             children={<ShowCasePage dispatch={store.dispatch} />}
           />
-          <Route
-            path="/cycv-fe"
-            children={<MyCvPage dispatch={store.dispatch} />}
-          />
+          <Route path="/" children={<MyCvPage dispatch={store.dispatch} />} />
         </Switch>
 
         <Block width="100%" className="cycv-footer align-center">
