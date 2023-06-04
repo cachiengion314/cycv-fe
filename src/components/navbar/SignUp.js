@@ -48,7 +48,7 @@ const SignUp = ({ width, isModalShow, socket, dispatch, className }) => {
           const token = rawData.token;
           Vars.closeModal(dispatch);
           Vars.signIn(dispatch, token, name, password);
-          Vars.socket_listenCommentedNotify(dispatch, socket);
+          
           Vars.showNotify(dispatch, `Created account ${rawData.messenger}`);
           // redirect route
           route.push("/");

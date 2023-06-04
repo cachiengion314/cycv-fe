@@ -96,25 +96,7 @@ class Vars {
       }
       this.setCycvObjToLocal(obj);
     };
-    this.socket_listenCommentedNotify = (dispatch, socket) => {
-      if (!socket) {
-        socket = this.getSocket();
-        this.applySocket(dispatch, socket);
-      }
-      socket.on("commented-notify", (data) => {
-        const { savefileId, commentContent } = data;
-        const { savesData } = this.getUserInLocal();
-        const found = this.findCurrentSaveData(savefileId, savesData);
-        if (found) {
-          this.showToast(
-            dispatch,
-            `someone has just commented "${commentContent}" on your cv ${found.saveData.name}! Please check it out`,
-            this.ideaImg
-          );
-          this.socketExecutor(dispatch);
-        }
-      });
-    };
+
     this.signIn = async (
       dispatch,
       token,

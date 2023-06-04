@@ -39,17 +39,17 @@ const EduBlock = ({ className, _id, width, isHide, dispatch, indexOfHigherCompon
         <BlockModified width={width} className={className}>
             <EditableText
                 width="100%" onChange={handleDegreeNameChange} textAlign="left"
-                fontSize={Vars.FONT_SIZE_MD} value={degreeName} maxLength="100"
+                fontSize={Vars.FONT_SIZE_MD} value={degreeName} maxLength="300"
                 className="education-block-editable-text mb-1"
             />
             <EditableText
                 width="100%" onChange={handleUniversityNameChange} textAlign="left"
-                fontSize={Vars.FONT_SIZE_SM} value={universityName} maxLength="120"
+                fontSize={Vars.FONT_SIZE_SM} value={universityName} maxLength="300"
                 className="education-block-editable-text" isHref={universityName.includes("http") && true || false}
             />
             <EditableText
                 width="100%" onChange={handleYearChange} textAlign="left"
-                fontSize={Vars.FONT_SIZE_SM} value={year} maxLength="100"
+                fontSize={Vars.FONT_SIZE_SM} value={year} maxLength="300"
                 className="education-block-editable-text"
             />
             <FloatButton isHide={isHide} onClick={handleRemove} fontSize={Vars.FONT_SIZE_SM}></FloatButton>

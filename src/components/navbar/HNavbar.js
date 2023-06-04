@@ -108,7 +108,6 @@ const HNavbar = ({
   const handleSignOut = () => {
     Vars.showYesNo(dispatch, "Are you sure want to sign out?", () => {
       Vars.signOut(dispatch);
-      socket.disconnect();
     });
   };
   const handleNameClick = () => {

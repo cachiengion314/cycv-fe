@@ -46,7 +46,7 @@ const SignIn = ({ width, isModalShow, socket, dispatch, className }) => {
           const name = rawData.name;
           Vars.closeModal(dispatch);
           Vars.signIn(dispatch, token, name, password);
-          Vars.socket_listenCommentedNotify(dispatch, socket);
+          
           Vars.showNotify(
             dispatch,
             `Sign in with account ${rawData.messenger}`

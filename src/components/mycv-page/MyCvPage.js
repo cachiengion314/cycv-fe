@@ -9,7 +9,6 @@ import Comment from ".././comments";
 import { useSelector } from "react-redux";
 
 const MyCvPage = ({ dispatch }) => {
-  const { socket } = useSelector((state) => state.io);
   const [needLoading, setNeedLoading] = React.useState(true);
   const route = useRoute();
   const saveDataIdQuery = route.querySaveDataId;
@@ -25,27 +24,27 @@ const MyCvPage = ({ dispatch }) => {
           );
           if (!isSuccess) {
             Vars.signIn(dispatch);
-            Vars.socket_listenCommentedNotify(dispatch, socket);
+
             route.push("/" + Vars.url_username_saveid());
             setNeedLoading(false);
             return;
           }
           Vars.signIn(dispatch, null, null, null, false);
-          Vars.socket_listenCommentedNotify(dispatch, socket);
+
           setNeedLoading(false);
           return;
         }
 
         if (Vars.isUserHaveCurrentSaveDataId()) {
           Vars.signIn(dispatch);
-          Vars.socket_listenCommentedNotify(dispatch, socket);
+
           route.push("/" + Vars.url_username_saveid());
           setNeedLoading(false);
           return;
         }
 
         Vars.signIn(dispatch);
-        Vars.socket_listenCommentedNotify(dispatch, socket);
+
         route.push("/");
         setNeedLoading(false);
         return;
