@@ -288,6 +288,10 @@ const SaveCvNavbar = ({
     );
   };
 
+  if (!name) {
+    return <></>;
+  }
+
   return (
     <BlockModified width={width} className={className}>
       <SwitchButton className="me-1 mb-1" />

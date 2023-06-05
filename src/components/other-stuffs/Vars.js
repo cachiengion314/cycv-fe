@@ -143,8 +143,14 @@ class Vars {
       }
     };
     this.fetch_applyTemperSaveData = async (dispatch, saveDataId) => {
-      let rawData = await this.fetchApi(this.urlGetSpecifySaveData(saveDataId));
-      console.log(`applySampleSaveData.rawData`, rawData);
+      let _saveDataId = saveDataId;
+      if (saveDataId === "647caf8f441bb9f3550d97ad") {
+        _saveDataId = "647e0d6a880c5ddde961c65a";
+      }
+      let rawData = await this.fetchApi(
+        this.urlGetSpecifySaveData(_saveDataId)
+      );
+
       if (rawData && rawData.messenger === "successfully!") {
         this.applyTemperSaveData(dispatch, rawData.doc.saveData);
         return true;
